@@ -5,10 +5,8 @@ import 'package:car_design/features/carDesign1/presentation/views/widgets/car_gr
 import 'package:car_design/features/carDesign1/presentation/views/widgets/category_buttons.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/vechile_categories.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
-import '../../../../core/images.dart';
 class CarDesignOneView extends StatefulWidget {
   const CarDesignOneView({Key? key}) : super(key: key);
 
@@ -30,19 +28,19 @@ class _CarDesignOneViewState extends State<CarDesignOneView> {
           ],
         ),
       ),
-      body:  const SingleChildScrollView(
+      body:   SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 5),
-            VechileCategories(),
-            CarBannerHeader(),
-            SizedBox(height: 15,),
-            SearchBar(),
-            SizedBox(height: 15,),
-            CategoryButtons(),
-            SizedBox(height: 15,),
-           CarGridViewDetails(),
-            CarFooter(),
+            const SizedBox(height: 5),
+            const VechileCategories(),
+            const CarBannerHeader(),
+            const SizedBox(height: 15,),
+            const SearchBar(),
+            const SizedBox(height: 15,),
+            const CategoryButtons(),
+            const SizedBox(height: 15,),
+            const CarGridViewDetails(),
+            const CarFooter(),
           ],
         ),
       ),

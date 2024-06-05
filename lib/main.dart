@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'core/colors.dart';
 import 'features/carDesign1/presentation/views/car_design_one_view.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           return data.devicePixelRatio != old.devicePixelRatio;
         },
         builder: ((context, child) {
-          return MaterialApp(
+          return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               useMaterial3: true,
