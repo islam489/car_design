@@ -3,6 +3,7 @@ import 'package:car_design/features/carDesign1/presentation/views/widgets/car_ba
 import 'package:car_design/features/carDesign1/presentation/views/widgets/car_footer.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/car_grid_view_details.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/category_buttons.dart';
+import 'package:car_design/features/carDesign1/presentation/views/widgets/search_bar.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/vechile_categories.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,19 +29,19 @@ class _CarDesignOneViewState extends State<CarDesignOneView> {
           ],
         ),
       ),
-      body:   SingleChildScrollView(
+      body:   const SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 5),
-            const VechileCategories(),
-            const CarBannerHeader(),
-            const SizedBox(height: 15,),
-            const SearchBar(),
-            const SizedBox(height: 15,),
-            const CategoryButtons(),
-            const SizedBox(height: 15,),
-            const CarGridViewDetails(),
-            const CarFooter(),
+            SizedBox(height: 5),
+            VechileCategories(),
+            CarBannerHeader(),
+            SizedBox(height: 15,),
+            SearchFilter(),
+            SizedBox(height: 15,),
+            CategoryButtons(),
+            SizedBox(height: 15,),
+            CarGridViewDetails(),
+            CarFooter(),
           ],
         ),
       ),
