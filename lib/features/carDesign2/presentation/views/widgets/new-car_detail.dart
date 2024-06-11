@@ -10,7 +10,7 @@ class CarTextDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.symmetric(horizontal:5 ,vertical:1 ),
+      padding: const EdgeInsets.symmetric(horizontal:5 ,vertical:15 ),
       child: Column(
         children: [
           Padding(

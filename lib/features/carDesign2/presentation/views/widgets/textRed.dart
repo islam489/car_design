@@ -11,7 +11,7 @@ class TextRed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 90),
+      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.red, // Set the background color to red

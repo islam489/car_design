@@ -23,21 +23,22 @@ class CarDesignOneView extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           CarDetailsCustomAppBar(image: imCar11, year: "2019", kms: "2000"),
-          SliverFixedExtentList(
-               delegate: SliverChildListDelegate([
-                 const CarTexts(),
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+               children: [
+                  const CarTexts(),
                  const TextRed(),
                  const CarTextDetails(),
                  const ContentText(),
                  const CarGridView(),
+                 SizedBox(height: 10,),
                  const ContactUsBar(),
-
-             ]), itemExtent: 250,
+             ]
               ),
 
 
-
-        ],
+          ),],
       ),
     );
   }
