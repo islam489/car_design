@@ -32,10 +32,7 @@ class ContactUsBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SvgPicture.asset(
-                    icoBook,
-                    width: 20.w,
-                  ),
+
                   CustomText(
                     text: "احجز السارة",
                     fontSize: 15.sp,
@@ -43,6 +40,10 @@ class ContactUsBar extends StatelessWidget {
                     textAlign: TextAlign.center,
                     alignment: Alignment.center,
                     fontWeight: FontWeight.bold,
+                  ),
+                  SvgPicture.asset(
+                    icoBook,
+                    width: 18.w,
                   ),
                 ],
               ),
@@ -60,7 +61,7 @@ class ContactUsBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(Icons.location_pin,color: kWhite,size: 30.sp),
+
                   CustomText(
                     text: "موقع السيارة",
                     fontSize: 15.sp,
@@ -69,6 +70,7 @@ class ContactUsBar extends StatelessWidget {
                     alignment: Alignment.center,
                     fontWeight: FontWeight.bold,
                   ),
+                  Icon(Icons.location_pin,color: kWhite,size: 25.sp),
                 ],
               ),
             ),

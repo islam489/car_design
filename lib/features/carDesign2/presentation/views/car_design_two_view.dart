@@ -32,7 +32,7 @@ class CarDesignOneView extends StatelessWidget {
                  const CarTextDetails(),
                  const ContentText(),
                  const CarGridView(),
-                 SizedBox(height: 10,),
+                 SizedBox(height: 25,),
                  const ContactUsBar(),
              ]
               ),
