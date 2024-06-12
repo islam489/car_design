@@ -18,7 +18,7 @@ class CarDesignOneView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: kWhite,
       body: CustomScrollView(
         slivers: [
@@ -27,13 +27,13 @@ class CarDesignOneView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
                children: [
-                  const CarTexts(),
-                 const TextRed(),
-                 const CarTextDetails(),
-                 const ContentText(),
-                 const CarGridView(),
-                 SizedBox(height: 25,),
-                 const ContactUsBar(),
+                 CarTexts(),
+                 TextRed(),
+                 CarTextDetails(),
+                 ContentText(),
+                 CarGridView(),
+                 SizedBox(height: 25),
+                 ContactUsBar(),
              ]
               ),
 

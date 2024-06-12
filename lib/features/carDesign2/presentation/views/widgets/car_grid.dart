@@ -20,7 +20,7 @@ class CarGridView extends StatelessWidget {
         price: '2000',
         year: '2019',
         kms: '1200',
-        insurance: 'bmw',
+        insurance: '2021',
       ),
       Car(
         title: 'جي ام سي  الفئة الرابعة',
@@ -28,7 +28,7 @@ class CarGridView extends StatelessWidget {
         price: '1500',
         year: '2018',
         kms: '1000',
-        insurance: 'toyota',
+        insurance: '2021',
       ),
 
       // Add more Car objects as needed
