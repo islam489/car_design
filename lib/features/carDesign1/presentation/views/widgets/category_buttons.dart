@@ -11,34 +11,37 @@ class CategoryButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-       Row(
-         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomButton(
-            color: kBlack1,
-            onTap: () {
+       Padding(
+         padding: const EdgeInsets.symmetric(horizontal: 15,),
+         child: Row(
+           mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomButton(
+              color: kBlack1,
+              onTap: () {
 
-            },
-            child: const CustomText( text: 'أمريكي', fontSize: 20,color: kWhite,),),
-          SizedBox(width: 15.w,),
-          CustomButton(
-            color: kBlack1,
-            onTap: () {
+              },
+              child: const CustomText( text: 'أمريكي', fontSize: 20,color: kWhite,),),
+            SizedBox(width: 15.w,),
+            CustomButton(
+              color: kBlack1,
+              onTap: () {
 
-            },
-            child: const CustomText( text: 'أوروبي', fontSize: 20,color: kWhite,)),
-          SizedBox(width: 15.w,),
+              },
+              child: const CustomText( text: 'أوروبي', fontSize: 20,color: kWhite,)),
+            SizedBox(width: 15.w,),
 
-          CustomButton(
-            color: kBlack1,
-            onTap: () {
+            CustomButton(
+              color: kBlack1,
+              onTap: () {
 
-            },
-            child: const CustomText( text: 'أسيوي', fontSize: 20,color: kWhite,),),
+              },
+              child: const CustomText( text: 'أسيوي', fontSize: 20,color: kWhite,),),
 
 
-        ],
+          ],
 
-    );
+             ),
+       );
   }
 }
