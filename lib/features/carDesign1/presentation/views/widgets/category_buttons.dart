@@ -12,24 +12,24 @@ class CategoryButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return
        Padding(
-         padding: const EdgeInsets.symmetric(horizontal: 15,),
+         padding: const EdgeInsets.only(left:5 ,right:5 ),
          child: Row(
-           mainAxisAlignment: MainAxisAlignment.center,
+           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+
             CustomButton(
               color: kBlack1,
               onTap: () {
 
               },
               child: const CustomText( text: 'أمريكي', fontSize: 20,color: kWhite,),),
-            SizedBox(width: 15.w,),
+
             CustomButton(
               color: kBlack1,
               onTap: () {
 
               },
               child: const CustomText( text: 'أوروبي', fontSize: 20,color: kWhite,)),
-            SizedBox(width: 15.w,),
 
             CustomButton(
               color: kBlack1,
