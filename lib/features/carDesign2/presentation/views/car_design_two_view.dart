@@ -31,6 +31,8 @@ class CarDesignOneView extends StatelessWidget {
                  TextRed(),
                  CarTextDetails(),
                  ContentText(),
+                 SizedBox(height: 30),
+                 TextProfile(),
                  CarGridView(),
                  SizedBox(height: 25),
                  ContactUsBar(),
