@@ -29,6 +29,7 @@ class CarDesignOneView extends StatelessWidget {
                children: [
                  CarTexts(),
                  TextRed(),
+                 /*CarDetailsLisTTile(),*/
                  CarTextDetails(),
                  ContentText(),
                  SizedBox(height: 30),

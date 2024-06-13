@@ -29,6 +29,7 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: 'ابيض', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'اللون الخارجي', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
@@ -55,10 +56,11 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: 'بيج', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'اللون الداخلي', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
-                      SvgPicture.asset(icoChat,color: kBlack,width: 17,height: 17,),
+                      SvgPicture.asset(icoSlindr,color: kBlack,width: 17,height: 17,),
                     ],
                   )
                 ],
@@ -81,6 +83,7 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: 'مخمل', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'نوع المقعد', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
@@ -107,10 +110,11 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: '✓', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'فتحة سقف', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
-                      SvgPicture.asset(icoChat,color: kBlack,width: 17,height: 17,),
+                      SvgPicture.asset(icoFav,color: kBlack,width: 17,height: 17,),
                     ],
                   )
                 ],
@@ -133,10 +137,11 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: '✓', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'كاميرا خلفية', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
-                      SvgPicture.asset(icoChat,color: kBlack,width: 17,height: 17,),
+                      SvgPicture.asset(icoSlindr,color: kBlack,width: 17,height: 17,),
                     ],
                   )
                 ],
@@ -159,6 +164,7 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: 'ابيض', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'اللون الخارجي', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
@@ -185,10 +191,11 @@ class CarTextDetails extends StatelessWidget {
                 children: [
                   CustomText(text: 'بيج', fontSize: 20,color: kBlack,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       CustomText(text: 'اللون الداخلي', fontSize: 20,color: kBlack,),
                       SizedBox(width: 15,),
-                      SvgPicture.asset(icoChat,color: kBlack,width: 17,height: 17,),
+                      SvgPicture.asset(icoSlindr,color: kBlack,width: 17,height: 17,),
                     ],
                   )
                 ],

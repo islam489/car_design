@@ -17,20 +17,20 @@ class TextRed extends StatelessWidget {
           color: Colors.red, // Set the background color to red
           border: Border.all(
             color: Colors.red, // Set the border color to red
-            width: 2.0, // Set the border width (optional)
+            width: 1.0, // Set the border width (optional)
           ),
           borderRadius: BorderRadius.all(
-            Radius.circular(20.0), // Set the border radius for rounded corners
+            Radius.circular(12.0), // Set the border radius for rounded corners
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(left: 5,top:5 ,right:15 ,bottom:5 ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              CustomText(text: "مكفولة حتي 7000 كم ", fontSize: 20,color: kWhite,),
+              CustomText(text: "مكفولة حتي 7000 كم ", fontSize: 25,color: kWhite,),
               SizedBox(width: 10,),
-              SvgPicture.asset(icoHomeAd4,color: kWhite,),
+              SvgPicture.asset(icoHomeAd4,color: kWhite, width: 30, height: 30,),
             ],
           ),
         ),
