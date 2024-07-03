@@ -1,3 +1,4 @@
+import 'package:car_design/core/colors.dart';
 import 'package:car_design/core/images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,52 +15,58 @@ class CarGridViewDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Car> cars = [
       Car(
-        title: 'جي ام سي الفئة الرابعه',
+        title: 'جي ام سي | يوكن | الفئةالرابعه',
         image: imCar1,
-        price: '2000',
+        price: '1270',
         year: '2019',
-        kms: '1200',
+        kms: '2000',
         insurance: '2021',
+        color: kbrwonwhite1,
       ),
       Car(
-        title: 'جي ام سي  الفئة الرابعة',
+        title: 'جي ام سي | يوكن | الفئةالرابعه',
         image: imCar11,
-        price: '1500',
-        year: '2018',
-        kms: '1000',
+        price: '1270',
+        year: '2019',
+        kms: '2000',
         insurance: '2021',
+        color: kbrwonwhite,
       ),
       Car(
-        title: 'جي ام سي  الفئة الرابعة',
+        title: 'جي ام سي | يوكن | الفئةالرابعه',
         image: imCar1,
-        price: '1500',
-        year: '2018',
-        kms: '1000',
+        price: '1270',
+        year: '2019',
+        kms: '2000',
         insurance: '2021',
+        color: kbrwonwhite1,
       ),
       Car(
-        title: 'جي ام سي  الفئة الرابعة',
+        title: 'جي ام سي | يوكن | الفئةالرابعه',
         image: imCar11,
-        price: '1500',
-        year: '2018',
-        kms: '1000',
+        price: '1270',
+        year: '2019',
+        kms: '2000',
         insurance: '2021',
+        color: kbrwonwhite,
       ),
       Car(
-        title: 'جي ام سي  الفئة الرابعة',
+        title: 'جي ام سي | يوكن | الفئةالرابعه',
         image: imCar1,
-        price: '1500',
-        year: '2018',
-        kms: '1000',
+        price: '1270',
+        year: '2019',
+        kms: '2000',
         insurance: '2021',
+        color: kbrwonwhite1,
       ),
       Car(
-        title: 'جي ام سي  الفئة الرابعة',
+        title: 'جي ام سي | يوكن | الفئةالرابعه',
         image: imCar11,
-        price: '1500',
-        year: '2018',
-        kms: '1000',
+        price: '1270',
+        year: '2019',
+        kms: '2000',
         insurance: '2021',
+        color: kbrwonwhite,
       ),
       // Add more Car objects as needed
     ];
@@ -70,14 +77,14 @@ class CarGridViewDetails extends StatelessWidget {
            Get.to(const CarDesignOneView());
          },
          child: Padding(
-           padding: const EdgeInsets.all(8.0),
+           padding: const EdgeInsets.all(5.0),
            child: GridView.builder(
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 2,
+              mainAxisSpacing: 12,
+              crossAxisSpacing: 1.2,
               childAspectRatio: 0.85,
             ),
              itemCount: cars.length, // Use the length of the cars list
@@ -90,6 +97,8 @@ class CarGridViewDetails extends StatelessWidget {
                  year: car.year,
                  kms: car.kms,
                  insurance: car.insurance,
+                 color: car.color,
+
                );
              },
 

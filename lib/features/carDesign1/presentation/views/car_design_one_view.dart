@@ -1,4 +1,5 @@
 import 'package:car_design/core/colors.dart';
+import 'package:car_design/features/carDesign1/presentation/views/widgets/badge_notify.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/car_banner_header.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/car_footer.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/car_grid_view_details.dart';
@@ -6,41 +7,51 @@ import 'package:car_design/features/carDesign1/presentation/views/widgets/catego
 import 'package:car_design/features/carDesign1/presentation/views/widgets/search_bar.dart';
 import 'package:car_design/features/carDesign1/presentation/views/widgets/vechile_categories.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class CarDesignOneView extends StatefulWidget {
+import '../../../../core/svg.dart';
+import '../../../../core/theme/theme_mode.dart';
+
+class CarDesignOneView extends StatelessWidget {
   const CarDesignOneView({Key? key}) : super(key: key);
 
   @override
-  State<CarDesignOneView> createState() => _CarDesignOneViewState();
-}
-
-class _CarDesignOneViewState extends State<CarDesignOneView> {
-  @override
   Widget build(BuildContext context) {
+
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: kBlack1,
-        title: const Row(
+        backgroundColor: kappbar,
+        title:  Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Icon(Icons.notifications,color: kWhite,),
-            Icon(Icons.menu,color: kWhite,),
+            NotificationIconWithBadge(
+            svgPath: icoNotification, // Path to your SVG asset
+            badgeCount: 2, // Adjust the badge count here
+          ),
+            ThemeModeDefault(),
+
+        SvgPicture.asset(
+          icoMenu, // Path to your menu SVG asset
+          color: Colors.white,
+          height: 18, // Adjust the size as needed
+          width: 18,
+        ),
           ],
         ),
       ),
+
       body:   const SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 5),
+            SizedBox(height: 17),
             VechileCategories(),
             CarBannerHeader(),
-            SizedBox(height: 15,),
             SearchFilter(),
-            SizedBox(height: 15,),
             CategoryButtons(),
-            SizedBox(height: 15,),
+            SizedBox(height: 13,),
             CarGridViewDetails(),
+            SizedBox(height: 10,),
             CarFooter(),
           ],
         ),

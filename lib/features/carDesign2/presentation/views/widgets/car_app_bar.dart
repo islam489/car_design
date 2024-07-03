@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../../../core/colors.dart';
 import '../../../../../core/constants_text.dart';
@@ -31,29 +32,27 @@ class CarDetailsCustomAppBar extends StatelessWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-
           Row(
             children: [
               CarDetailsIcon(
-                size: 30.w,
-                icon: Icons.heart_broken,
-
-                onTap: (){},
+                size: 35,
+                icon: SvgPicture.asset(icoFav,width: 20.w,), // Replace with your SVG asset path
+                onTap: () {},
               ),
-              SizedBox(width: 20.h,),
+              SizedBox(width: 20.w),
               CarDetailsIcon(
-                size: 30.w,
-                icon: Icons.send_rounded,
-                onTap: (){},
+                size: 30,
+                icon: SvgPicture.asset(icoShare,width: 20.w,), // Replace with your SVG asset path
+                onTap: () {},
               ),
-
             ],
           ),
-
           CarDetailsIcon(
-            icon: Icons.arrow_forward,
-            size: 25.w,
-            onTap: (){Get.back();},
+            icon: SvgPicture.asset(icoShare,width: 20.w,), // Replace with your SVG asset path
+            size: 30,
+            onTap: () {
+              Get.back(); // Example of your onTap function
+            },
           ),
         ],
       ),
@@ -65,25 +64,25 @@ class CarDetailsCustomAppBar extends StatelessWidget {
         background: Stack(
           children: [
             SizedBox(
-              height: 325.h,
+              height: 350.h,
               width: double.infinity,
               child: Image.asset(
                 image,
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
                 width: double.infinity,
               ),
             ),
             Positioned(
-              bottom: -5,
+              bottom: -3,
               child: Padding(
                 padding:  EdgeInsets.symmetric(horizontal: 20.w),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     CarDetailsItem(
-                      icon: icoHomeAd4,
-                      label: tInsurance,
-                      num: '6',
+                      icon: icoHomeAd3,
+                      label: tmamsha,
+                      num: kms,
                     ),
                     SizedBox(width: 10.w,),
                     CarDetailsItem(
@@ -92,10 +91,11 @@ class CarDetailsCustomAppBar extends StatelessWidget {
                       num: year,
                     ),
                     SizedBox(width: 10.w,),
+
                     CarDetailsItem(
                       icon: icoSlindr,
-                      label: tKms,
-                      num: kms,
+                      label: tmoharek,
+                      num: '6',
                     ),
                   ],
                 ),

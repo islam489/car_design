@@ -1,104 +1,56 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/colors.dart';
-import '../../../../../core/common_wiget/custom_text.dart';
-import '../../../../../core/svg.dart';
-import '../../../../carDesign1/presentation/views/widgets/car_list_items.dart';
-import '../../../../carDesign1/presentation/views/widgets/car_model.dart';
-import 'car_list_model.dart';
 
-class CarDetailsLisTTile extends StatelessWidget {
-  const CarDetailsLisTTile({Key? key}) : super(key: key);
+class CarInfo extends StatelessWidget {
+  final List<Map<String, dynamic>> carDetails = [
+    {'icon': Icons.directions_car, 'label': 'اللون الخارجي', 'value': 'أبيض'},
+    {'icon': Icons.chair, 'label': 'اللون الداخلي', 'value': 'بيج'},
+    {'icon': Icons.event_seat, 'label': 'نوع المقعد', 'value': 'مخمل'},
+    {'icon': Icons.camera_rear, 'label': 'كاميرا خلفية', 'value': "✔"},
+    {'icon': Icons.sensors, 'label': 'سنسر', 'value': 'أمامي '},
+    {'icon': Icons.camera_rear, 'label': 'سليندر', 'value': '6'},
+    {'icon': Icons.settings, 'label': 'ناقل الحركة', 'value': 'اوتوماتيك'},
+  ];
 
   @override
   Widget build(BuildContext context) {
-    final List<CarList> cars = [
-      CarList(
-        title: 'اللون الخارجي ',
-        image: icoMenu,
-        Subtitle: 'ابيض',
-      ),
-      CarList(
-        title: 'اللون الداخلي ',
-        image: icoBook,
-        Subtitle: 'بيج',
-      ),
-      CarList(
-        title: 'نوع المقعد ',
-        image: icoFav,
-        Subtitle: 'مخمل',
-      ),
-      CarList(
-        title: 'فتحة سقف',
-        image: icoLocation,
-        Subtitle: '✓',
-      ),
-      CarList(
-        title: 'كاميرا خلفية ',
-        image: icoChat,
-        Subtitle: '✓',
-      ),
-      CarList(
-        title: 'سينسر  ',
-        image: icoSlindr,
-        Subtitle: 'امامي - خلفي ',
-      ),
-      CarList(
-        title: 'سليندر',
-        image: icoSlindr,
-        Subtitle: '6',
-      ),
-      CarList(
-        title: 'ناقل حركة',
-        image: icoMenu,
-        Subtitle: 'اوتوماتيك',
-      ),
-      // Add more Car objects as needed
-    ];
-
-    return SizedBox(
-
+    return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView.separated(
-          itemCount: cars.length,
-          itemBuilder: (context, index) {
-            return Container(
-              height: 50,
-              color: kgray,
-              child:Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  CustomText(text: cars[index].Subtitle, fontSize: 20,color: kBlack,textAlign: TextAlign.center,),
-                  Row(
-                    children: [
-                      CustomText(text: cars[index].title, fontSize: 20,color: kBlack,textAlign: TextAlign.center,),
-                      SizedBox(width: 15,),
-                      SvgPicture.asset(cars[index].image,color: kBlack,width: 17,height: 17,fit: BoxFit.contain,),
-                    ],
-                  )
-                ],
-              )
-              /*ListTile(
+        padding: const EdgeInsets.only(right: 20),
+        child: Column(
+          children: carDetails.map((detail) {
+            return Column(
+              children: [
+                Container(
+                  height: 43.h,
+                  color: kWhitedark,
+                  child: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Padding(
+                      padding:  EdgeInsets.only(left: 50.w, right: 10.w, top: 0.h, bottom: 5.h),
+                      child: ListTile(
+                        leading: Icon(detail['icon'], size: 22),
+                        title: Text(detail['label'], style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+                        trailing: Text(
 
-                title: Text(cars[index].title),
-                leading: Text(cars[index].Subtitle),
-                trailing: Image.asset(
-                  cars[index].image,
-                  errorBuilder: (context, error, stackTrace) {
-                    return Icon(Icons.error, color: Colors.red);
-                  },
+                          detail['value'].toString(),
+                          style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-              )*/,
+                Divider(
+                  color: Colors.white, // لون الفاصل
+                  thickness: 1.5,    // سمك الفاصل
+                  height: 1.0,       // ارتفاع الفاصل
+                ),
+              ],
             );
-          },
-          separatorBuilder: (context, index) {
-            return const Divider(
-              color: kWhite, // Customize the color and thickness of the divider
-              thickness: 0.2,
-            );
-          },
+          }).toList(),
         ),
       ),
     );

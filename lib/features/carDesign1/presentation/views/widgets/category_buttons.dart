@@ -10,38 +10,49 @@ class CategoryButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-       Padding(
-         padding: const EdgeInsets.only(left:5 ,right:5 ),
-         child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-
-            CustomButton(
-              color: kBlack1,
-              onTap: () {
-
-              },
-              child: const CustomText( text: 'أمريكي', fontSize: 20,color: kWhite,),),
-
-            CustomButton(
-              color: kBlack1,
-              onTap: () {
-
-              },
-              child: const CustomText( text: 'أوروبي', fontSize: 20,color: kWhite,)),
-
-            CustomButton(
-              color: kBlack1,
-              onTap: () {
-
-              },
-              child: const CustomText( text: 'أسيوي', fontSize: 20,color: kWhite,),),
-
-
-          ],
-
-             ),
-       );
+    return Padding(
+      padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          CustomButton(
+            color: kbuttonblack,
+            onTap: () {},
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 3), // Adjust padding here
+              child: const CustomText(
+                text: 'أمريكي',
+                fontSize: 18,
+                color: kWhite,
+              ),
+            ),
+          ),
+          CustomButton(
+            color: kbuttonblack,
+            onTap: () {},
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 3), // Adjust padding here
+              child: const CustomText(
+                text: 'أوروبي',
+                fontSize: 18,
+                color: kWhite,
+              ),
+            ),
+          ),
+          CustomButton(
+            color: kbuttonblack,
+            onTap: () {},
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 3), // Adjust padding here
+              child: const CustomText(
+                text: 'أسيوي',
+                fontSize: 18,
+                color: kWhite,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

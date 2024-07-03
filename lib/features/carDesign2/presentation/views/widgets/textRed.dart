@@ -2,6 +2,7 @@ import 'package:car_design/core/colors.dart';
 import 'package:car_design/core/common_wiget/custom_text.dart';
 import 'package:car_design/core/images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/svg.dart';
@@ -11,12 +12,12 @@ class TextRed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 10),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.red, // Set the background color to red
+          color: kredtext, // Set the background color to red
           border: Border.all(
-            color: Colors.red, // Set the border color to red
+            color: kredtext, // Set the border color to red
             width: 1.0, // Set the border width (optional)
           ),
           borderRadius: BorderRadius.all(
@@ -28,9 +29,10 @@ class TextRed extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              CustomText(text: "مكفولة حتي 7000 كم ", fontSize: 25,color: kWhite,),
-              SizedBox(width: 10,),
-              SvgPicture.asset(icoHomeAd4,color: kWhite, width: 30, height: 30,),
+              CustomText(text: "مكفولة حتي 7000 كم ", fontSize: 25,color: kWhitelight,),
+              SizedBox(width: 15.w,),
+              SvgPicture.asset(icoHomeAd4,color: kWhitelight, width: 27, height: 27,),
+              SizedBox(width: 5.w,),
             ],
           ),
         ),

@@ -9,12 +9,11 @@ class CarFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return
         Container(
-        margin: EdgeInsets.symmetric(vertical: 10),
         child: Image.asset(
           imCar2,
-          height: 125,
+          height: 160,
           width: double.infinity,
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
         ),
     );
   }

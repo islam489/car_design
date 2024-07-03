@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -12,18 +13,21 @@ class CarsListLabelItem extends StatelessWidget {
     required this.icon,
     required this.num,
     required this.label,
+
+
   }) : super(key: key);
   final String icon;
   final String num;
   final String label;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70.h,
+      height: 75.h,
       width: 44.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.r),
-        color: kWhite,
+        color: kWhitedark,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,16 +35,18 @@ class CarsListLabelItem extends StatelessWidget {
         children: [
           Padding(
             padding:  EdgeInsetsDirectional.only(start: 10.w,end: 10.w,),
-            child: SvgPicture.asset(icon,width: 25.w,color: kBlack,),
+            child: SvgPicture.asset(icon,width: 25.w,),
           ),
           CustomText(
             text: label,
+            alignment: Alignment.center,
             fontSize: 15.sp,
             fontWeight: FontWeight.bold,
             color: kBlack,
           ),
           CustomText(
             text: num,
+            alignment: Alignment.center,
             fontSize: 15.sp,
             fontWeight: FontWeight.bold,
             color: kBlack,

@@ -10,12 +10,29 @@ class CarTexts extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.symmetric(horizontal:10 ,vertical: 20),
-      child: const Row(
+      child:  Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          CustomText(text: ' 8,700 دك', fontSize: 25,fontWeight: FontWeight.bold,color: kBlack,),
-          SizedBox(width: 25),
+          Row(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+
+                children: [
+
+                  CustomText(text: ' د.ك ',fontSize: 22,color: kBlack1,),
+                  SizedBox(width: 5.w,),
+                  CustomText(text: '8,700 ', fontSize: 25,fontWeight: FontWeight.bold,color: kBlack,),
+                  SizedBox(width: 30.w),
+                ],
+              ),
+
+
+            ],
+          ),
+          SizedBox(width: 35.w),
           CustomText(text: 'يوكن بحالة جيدة', fontSize: 22,color: kBlack1,),
+          SizedBox(width: 10.w),
 
         ],
       ),

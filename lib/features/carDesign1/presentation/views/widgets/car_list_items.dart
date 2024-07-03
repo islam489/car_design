@@ -16,6 +16,7 @@ class CarsListItem extends StatelessWidget {
     required this.price,
     required this.year,
     required this.kms,
+    required this.color,
     required this.insurance,
   }) : super(key: key);
   final String title;
@@ -24,6 +25,7 @@ class CarsListItem extends StatelessWidget {
   final String year;
   final String kms;
   final String insurance;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -39,36 +41,38 @@ class CarsListItem extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 40.h,
-                color: kBluewhite,
+                height: 22.h,
+                color: color,
                 child: CustomText(
                   text: title,
-                  fontSize: 18.sp,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.bold,
                   color: kBlack,
-                  alignment: Alignment.center,
+                  alignment: Alignment.topCenter,
                 ),
               ),
               Image.asset(
+
                 image,
                 fit: BoxFit.cover,
                 width: double.infinity,
-                height: 165.h,
+                height: 160.h,
               ),
             ],
           ),
         ),
         Positioned(
-          bottom: -5,
+          bottom: -3,
           child: Row(
             children:  [
-              CarsListLabelItem(icon: icoHomeAd1,label: tPrice,num: price,),
+              CarsListLabelItem(icon: icoHomeAd4,label: tInsurance,num: insurance,),
+              SizedBox(width: 2.w),
+              CarsListLabelItem(icon: icoHomeAd3,label: tKms,num: kms,),
               SizedBox(width: 2.w),
               CarsListLabelItem(icon: icoHomeAd2,label: tModel,num: year,),
               SizedBox(width: 2.w),
-              CarsListLabelItem(icon: icoHomeAd3,label: tKms,num: kms),
-              SizedBox(width: 2.w),
-              CarsListLabelItem(icon: icoHomeAd4,label: tInsurance,num: insurance,),
+              CarsListLabelItem(icon: icoHomeAd1,label: tPrice,num: price,),
+
             ],
           ),
         ),

@@ -12,31 +12,37 @@ class CarDetailsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 105.h,
+      height: 120.h,
       width: 105.w,
       decoration: BoxDecoration(
-        color: kGreen,
-        borderRadius: BorderRadius.circular(10.r),
+        color: kcontainercolor,
+        borderRadius: BorderRadius.all(Radius.circular(15)),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Padding(
-            padding:  EdgeInsetsDirectional.only(start: 10.w,end: 10.w,),
-            child: SvgPicture.asset(icon,width: 40.w,),
-          ),
-          CustomText(
-            text: label,
-            fontSize: 15.sp,
-            fontWeight: FontWeight.bold,
-          ),
-          CustomText(
-            text: num,
-            fontSize: 15.sp,
-            fontWeight: FontWeight.bold,
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            SvgPicture.asset(icon,width: 40.w,),
+            SizedBox(height: 10.h,),
+            CustomText(
+              text: label,
+              fontSize: 15.sp,
+              color: ktextlabel,
+              fontWeight: FontWeight.bold,
+
+
+            ),
+            SizedBox(height: 5.h,),
+            CustomText(
+              text: num,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.bold,
+              color: ktextnum,
+            ),
+          ],
+        ),
       ),
     );
   }

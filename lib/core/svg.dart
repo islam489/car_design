@@ -15,4 +15,6 @@ const icoNotification = "assets/icons/Home - Notification .svg";
 const icoAbout = "assets/icons/Menu - About.svg";
 const icoMenu = "assets/icons/Home - menu.svg";
 const icoContact = "assets/icons/Menu - Contact.svg";
+const icoprofile = "assets/icons/Capture7.png";
+
 
