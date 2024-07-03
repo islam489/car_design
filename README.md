@@ -19,6 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 Notes:-
+Using flutter_screenutil package to make ui responsive.
 Using Clean Architecture Structure data and domain and presentation folders.
 Using GetX for route management, dependency injection, and state management (for dark and light modes) and make Button in Appbar to toggle between dark and light mode.
-Using unit tests to verify the behavior of ThemeService, ensuring it correctly toggles between light and dark themes and persists the theme state.
+Using unit tests to verify the behavior of ThemeService and ThemeController, ensuring it correctly toggles between light and dark themes and persists the theme state.
