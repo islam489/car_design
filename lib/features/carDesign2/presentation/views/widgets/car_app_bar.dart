@@ -73,7 +73,7 @@ class CarDetailsCustomAppBar extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: -3,
+              bottom: -8,
               child: Padding(
                 padding:  EdgeInsets.symmetric(horizontal: 20.w),
                 child: Row(

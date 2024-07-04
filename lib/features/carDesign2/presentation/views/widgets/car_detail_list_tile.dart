@@ -29,7 +29,7 @@ class CarInfo extends StatelessWidget {
                   child: Directionality(
                     textDirection: TextDirection.rtl,
                     child: Padding(
-                      padding:  EdgeInsets.only(left: 50.w, right: 10.w, top: 0.h, bottom: 5.h),
+                      padding:  EdgeInsets.only(left: 70.w, right: 10.w, top: 0.h, bottom: 5.h),
                       child: ListTile(
                         leading: Icon(detail['icon'], size: 22),
                         title: Text(detail['label'], style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
